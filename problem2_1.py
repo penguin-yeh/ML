@@ -24,7 +24,7 @@ class MyCNN(nn.Module): #MyCNN繼承了nn.Module
 
       nn.Conv2d(256, 256, kernel_size=3, padding=1), #output_shape = (256,13,13)
       nn.ReLU(inplace=True),
-      #nn.MaxPool2d(kernel_size=3, stride=2), #output_shape = (256,6,6)
+      nn.MaxPool2d(kernel_size=3, stride=2), #output_shape = (256,6,6)
       #==========================================================
     )
     self.features2 = nn.Sequential(
