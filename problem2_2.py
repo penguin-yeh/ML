@@ -49,7 +49,7 @@ class MyCNN(nn.Module): #MyCNN繼承了nn.Module
     self.classifier = nn.Sequential(
       #============== 在此區塊新增或減少隱藏層 =================
       nn.Dropout(),
-      nn.Linear(256 * + * 6, 4096),
+      nn.Linear(256 * 6 * 6, 4096),
       nn.ReLU(inplace=True),
       nn.Dropout(),
       nn.Linear(4096, 4096),
